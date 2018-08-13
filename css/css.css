@@ -1,0 +1,170 @@
+.fa-heart {
+  color: #D8588C;
+  padding-left: 3px;
+  padding-right: 2px;
+  -webkit-animation: pulse 1s linear infinite;
+  -moz-animation: pulse 1s linear infinite;
+  -ms-animation: pulse 1s linear infinite;
+  animation: pulse 1s infinite;
+}
+
+.social {
+  margin: 60px auto 0px auto;
+  text-align: center;
+}
+
+.effect .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: -2em;
+  margin-left: -2em;
+}
+
+.effect .buttons a i {
+  transform: rotate(-45deg);
+}
+
+.effect.thurio a {
+  -webkit-transition: border-radius 0.2s linear 0s;
+  transition: border-radius 0.2s linear 0s;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.effect a {
+  text-decoration: none !important;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  font-size: 25px;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.effect.thurio a:hover {
+  border-radius: 0px;
+}
+
+.partner-logo {
+  max-width: 70%;
+  margin-bottom: 30px;
+}
+
+#map {
+  position: static;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 400px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.col-md-4 {
+  margin-bottom: 30px;
+}
+
+
+div#banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 100%;
+  z-index:99999;
+  font-weight:600;
+}
+
+div#banner-content {
+  width: 800px;
+  margin: 0 auto;
+}
+
+div#main-content {
+  padding-top: 70px;
+}
+@media only screen and (max-width: 1000px) {
+    .banner {
+        display:none;
+    }
+}
+.hidden {
+  display:none;
+}
+
+/*Schedule table stuff*/
+.text-color{
+  color: #EE4547;
+}
+
+.schedule{
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+.schedule> tbody > tr >td:first-child {
+width: 30%;
+}
+.schedule> tbody > tr >td:last-child {
+  width: 30%;
+}
+
+.schedule table{
+  table-layout: fixed;
+}
+
+
+
+
+/* latin */
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url(https://fonts.gstatic.com/s/droidserif/v8/tDbK2oqRg1oM3QBjjcaDkOr4nAfcHg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Droid Serif Bold Italic'), local('DroidSerif-BoldItalic'), url(https://fonts.gstatic.com/s/droidserif/v8/tDbX2oqRg1oM3QBjjcaDkOr4lLz5CwOnSA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Serif Regular'), local('DroidSerif-Regular'), url(https://fonts.gstatic.com/s/droidserif/v8/tDbI2oqRg1oM3QBjjcaDkOr9rAU.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(https://fonts.gstatic.com/s/droidserif/v8/tDbV2oqRg1oM3QBjjcaDkOJGiRD7OwE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
