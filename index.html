@@ -1,138 +1,4 @@
 <!DOCTYPE html>
-<style>
-* {
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #474e5d;
-    font-family: Helvetica, sans-serif;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-}
-
-/* Container around content */
-.container {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-}
-
-/* The circles on the timeline */
-.container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #ED2C3E;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-/* Place the container to the left */
-.left {
-    left: 0;
-}
-
-/* Place the container to the right */
-.right {
-    left: 50%;
-}
-
-/* Add arrows to the left container (pointing right) */
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-}
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.right::after {
-    left: -16px;
-}
-
-/* The actual content */
-.content {
-    padding: 20px 30px;
-    position: relative;
-    border-radius: 6px;
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-  .timeline::after {
-    left: 31px;
-  }
-  
-  /* Full-width containers */
-  .container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-  
-  /* Make sure that all arrows are pointing leftwards */
-  .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-  /* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-    left: 15px;
-  }
-  
-  /* Make all right containers behave like the left ones */
-  .right {
-    left: 0%;
-  }
-}
-</style>
 <html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -141,7 +7,6 @@ body {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-78957013-1');
     </script>
 
@@ -150,7 +15,7 @@ body {
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Hackital - Blockchain Hack Day</title>
+  <title>Hackital - Ethereum Hackathon in DC</title>
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -211,8 +76,8 @@ body {
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
+        <div class="intro-lead-in">Student Blockchain Hackday in the US Capital</div>
         <div class="intro-heading text-uppercase">
-              <div class="intro-lead-in" style="font-size: 40px;">Student Blockchain Hackday in the US Capital</div>
              <div class="intro-lead-in" style="font-size: 30px;">November 10, 2018</div>
           <div class="intro-lead-in" style="font-size: 22px;">The George Washington University</div>
           <div class="intro-lead-in" style="font-size: 22px;">Registration Opens October 17th</div>
@@ -229,40 +94,34 @@ body {
   .table th {
     border-top: inherit;
   }
-
   .table-hover tbody tr:hover {
     color: white;
     background-color: rgb(239, 68, 71);
   }
 </style>
-<div class="timeline">
+
+<section id="timeline" class="cd-container">
   <div class="row" style="margin-bottom: -3em;">
     <div class="col-lg-12 text-center">
       <h2 class="section-heading text-uppercase">Schedule of Events</h2>
       <h3 class="section-subheading text-muted">Hacking, Workshops, and more</h3>
     </div>
   </div>
-  <div class="container left">
-    <div class="content">
-      <h2>9:30 Registration and Breakfast</h2>
-      <p>Check in, get some swag and eat some *free* food!</p>
-    </div>
-    <div class="content">
-      <h2>10:00 Smart Contracts Presentation</h2>
-    </div>
-    <div class="content">
-      <h2>11:00 Web3 Presentation</h2>
-    </div>
-    <div class="content">
-      <h2>11:45 What the #@%$ is Code?</h2>
-          <p>Learn the very basics of code to get started on your project!</p>
-    </div>    
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>Hacking Begins!</h2>
-      <p>The rest of the afternoon will be devoted to coding with optional workshops and events.</p>
-    </div>
+  <div class="schedule" align="left">
+    <h4 class="text-color">9:30 Registration and Breakfast</h1>
+    <h4 class="text-color">10:00 Smart Contracts</h1>
+    <h4 class="text-color">11:00 Web3</h1>
+    <h4 class="text-color">11:45 What the #@?% is Code?</h1>   
+    <h3 class="text-color">12:15 Hacking Starts!</h1>
+    <h3 class="text-color">12:30 Lunch</h1>   
+    <h3 class="text-color">2:00 Post Lunch Siesta</h1>    
+    <h3 class="text-color">4:00 Dance Break</h1>   
+    <h3 class="text-color">5:00 Judging and Showcase</h1>  
+    <h3 class="text-color">6:00 New Venture Competition</h1>   
+    <h3 class="text-color">6:30 Prizes!</h1>
+    <h3 class="text-color"></h1>    
+    <br>
+
   </div>
 </section>
 <!-- cd-timeline -->
@@ -804,29 +663,22 @@ them started with new things.</p>
 
 <script>
   var countDownDate = new Date("Apr 27, 2018").getTime();
-
   var x = setInterval(function() {
-
     var now = new Date().getTime();
-
     var distance = countDownDate - now;
-
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
     document.getElementById("days").innerHTML = days;
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
-
     if (distance < 0) {
       clearInterval(x);
       document.getElementById("days").innerHTML = "0";
     }
   }, 1000);
-
   //Mapbox functions
   mapboxgl.accessToken = 'pk.eyJ1Ijoic2NoaWFyaXp6aSIsImEiOiJjajE4a3NuZWowNzQ5MzNvN2xkdGh2YnVwIn0.dOZQgGCs8Fwxpy7bmRvvTg';
   var map = new mapboxgl.Map({
@@ -835,10 +687,8 @@ them started with new things.</p>
     center: [-77.036871, 38.898536], // starting position [lng, lat]
     zoom: 12 // starting zoom
   });
-
   // disable map zoom when using scroll
   map.scrollZoom.disable();
-
   map.on('load', function() {
     map.addLayer({
       "id": "points",
@@ -871,21 +721,15 @@ them started with new things.</p>
         "text-color": "rgba(255, 255, 255, 255)"
       }
     });
-
   });
-
-
-
   $(document).on('show', '.accordion', function(e) {
     //$('.accordion-heading i').toggleClass(' ');
     $(e.target).prev('.accordion-heading').addClass('accordion-opened');
   });
-
   $(document).on('hide', '.accordion', function(e) {
     $(this).find('.accordion-heading').not($(e.target)).removeClass('accordion-opened');
     //$('.accordion-heading i').toggleClass('fa-chevron-right fa-chevron-down');
   });
-
   $(document).ready(function() {
     $('.mapboxgl-canvas').css({
       'position': "initial"
