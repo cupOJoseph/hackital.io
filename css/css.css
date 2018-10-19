@@ -2,13 +2,17 @@ a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
-    color: red;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom:5px;
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     
 }
+
 
 
 .fa-heart {
