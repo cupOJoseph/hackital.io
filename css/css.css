@@ -1,8 +1,5 @@
 a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    background-color: red; /* Green */
+    background-color: red;
     border: none;
     color: white;
     padding: 15px 32px;
