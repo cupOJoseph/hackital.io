@@ -2,8 +2,6 @@ a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
-    
-    text-color: white;
     color: red;
     padding-left: 10px;
     padding-right: 10px;
