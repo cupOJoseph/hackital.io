@@ -4,7 +4,8 @@ a.button {
     appearance: button;
 
     text-decoration: none;
-    color: #EE4547;
+    background-color: #EE4547;
+    color: #D8588C
 }
 
 
