@@ -2,8 +2,7 @@ a.button {
     background-color: red;
     border: none;
     color: white;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
