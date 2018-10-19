@@ -3,8 +3,8 @@ a.button {
     -moz-appearance: button;
     appearance: button;
 
-    text-decoration: none;
-    color: #EE4547;
+    text-color: white;
+    color: red;
     
 }
 
