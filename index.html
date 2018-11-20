@@ -61,13 +61,11 @@
    <!-- Header -->
   <header class="masthead">
     <div class="container">
-      <div class="intro-text">
           <h1 style="color:red">Student Blockchain Hackday in the US Capital</h1>
           <h4>March 22nd - March 24th 2018</h4>
           <h4>The George Washington University</h4>
           <h4>Registration Opens Soon</h4>
-        </div>
-      <!--  <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://hackital.typeform.com/to/Jturxo">Let's Go</a> -->
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://hackital.typeform.com/to/Jturxo">Let's Go</a> -->
       </div>
     </div>
   </header>
@@ -335,7 +333,7 @@ hackathon, which is close to the DC monuments and several hotels.
                      <div class="accordion-group">
                         <div class="accordion-heading">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#c9">
-                              What if I don’t have an idea / team / solidity skills?</a>
+                              What if I don’t have an idea / team?</a>
                         </div>
                         <div id="c9" class="accordion-body collapse">
                             <div class="accordion-inner">
@@ -515,6 +513,24 @@ Hackathons are great places for learning because of community support,
 our mentors, and the resources we provide to our participants to get
 them started with new things.</p>
         </div>
+            <script>
+  var countDownDate = new Date("Apr 27, 2018").getTime();
+   var x = setInterval(function() {
+     var now = new Date().getTime();
+     var distance = countDownDate - now;
+     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+     document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+     if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("days").innerHTML = "0";
+    }
+  }, 1000);
         <!--/.First column-->
          <hr class="w-100 clearfix d-md-none">
          <!--Third column-->
