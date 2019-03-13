@@ -39,7 +39,7 @@ body, html {
   <!-- MLH trust badge-->
   <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=blue" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-blue.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a>
   <!-- full background image and text -->
-  <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <header class="bgimg-1 w3-display-container" id="home">
     <div class="w3-display-left w3-text-white" style="padding:48px;">
       <span class="w3-large">Hackital and Smart Cities @ GW Present:</span>
     <div class="row">
@@ -367,6 +367,22 @@ body, html {
        }
      });
     });
+    $(document).on('show', '.accordion', function(e) {
+    //$('.accordion-heading i').toggleClass(' ');
+    $(e.target).prev('.accordion-heading').addClass('accordion-opened');
+  });
+   $(document).on('hide', '.accordion', function(e) {
+    $(this).find('.accordion-heading').not($(e.target)).removeClass('accordion-opened');
+    //$('.accordion-heading i').toggleClass('fa-chevron-right fa-chevron-down');
+  });
+   $(document).ready(function() {
+    $('.mapboxgl-canvas').css({
+      'position': "initial"
+    });
+    $('.mapboxgl-control-container').css({
+      'display': 'none'
+    })
+  })
  </script>
  </body>
 </html>
