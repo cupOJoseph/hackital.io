@@ -39,18 +39,16 @@ body, html {
   <!-- MLH trust badge-->
   <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=blue" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-blue.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a>
   <!-- full background image and text -->
-  <header class="masthead">
-      <div class="container">
-        <div class="intro-text">
-            <h3>Hackital and Smart Cities at GW Present:</h3>
-            <h2>The Smart City Hackathon</h2>
-            <h4>March 22nd - March 24th 2019</h4>
-            <h4>The George Washington University</h4>
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://goo.gl/forms/ozLersFQR6Rb1bzj2">Sign Up Now</a>
-          </div>
-        </div>
-      </div>
-    </header>
+  <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-left w3-text-white" style="padding:48px;">
+      <span class="w3-large">Hackital and Smart Cities @ GW Present:</span>
+    <div class="row">
+      <span class="w3-jumbo w3-hide-small">The Smart Cities Hackathon</span><br>
+    </div>
+      <span class="w3-large">March 22nd - March 24th | George Washington University</span>
+      <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Register Now!</a></p>
+    </div>
+  </header>
     <!-- About Section -->
     <div class="w3-container" style="padding:128px 16px" id="about">
       <div class="w3-half">
@@ -76,6 +74,11 @@ body, html {
           education and projects. George Washington University students will be the workforce that Smart Cities need along a spectrum
           of industries and careers.</p>
       </div>
+    </div>
+    <div class="row">
+      <!-- <div class="col-md-12"> -->
+      <div id="map" scrolling="no" class="mapboxgl-map"></div>
+      <!-- </div> -->
     </div>
     <!-- Schedule Section -->
     <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="schedule">
@@ -317,6 +320,53 @@ body, html {
     teams of 4.</p>
       </div>
     </div>
-
-</body>
+<!-- Mapbox imports -->
+  <link rel="stylesheet" href="css/mapbox-gl.css">
+  <script type="text/javascript" src="scripts/mapbox-gl.js"></script>
+ <script>
+ //Mapbox functions
+   mapboxgl.accessToken = 'pk.eyJ1Ijoic2NoaWFyaXp6aSIsImEiOiJjajE4a3NuZWowNzQ5MzNvN2xkdGh2YnVwIn0.dOZQgGCs8Fwxpy7bmRvvTg';
+   var map = new mapboxgl.Map({
+     container: 'map', // container id
+     style: 'mapbox://styles/schiarizzi/cje3ka2m25q0w2rl70bd32303', // stylesheet location
+     center: [-77.036871, 38.898536], // starting position [lng, lat]
+     zoom: 12 // starting zoom
+   });
+    // disable map zoom when using scroll
+   map.scrollZoom.disable();
+    map.on('load', function() {
+     map.addLayer({
+       "id": "points",
+       "type": "symbol",
+       "source": {
+         "type": "geojson",
+         "data": {
+           "type": "FeatureCollection",
+           "features": [{
+             "type": "Feature",
+             "geometry": {
+               "type": "Point",
+               "coordinates": [-77.047203, 38.899932] //marvin center lon lat, based on address conversion
+             },
+             "properties": {
+               "title": "Hackital",
+               "icon": "castle"
+             }
+           }]
+         }
+       },
+       "layout": {
+         "icon-image": "{icon}-15",
+         "text-field": "{title}",
+         "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+         "text-offset": [0, 0.6],
+         "text-anchor": "top"
+       },
+       "paint": {
+         "text-color": "rgba(255, 255, 255, 255)"
+       }
+     });
+    });
+ </script>
+ </body>
 </html>
