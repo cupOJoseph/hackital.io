@@ -10,126 +10,67 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<body>
-
-  <!-- MLH trust badge-->
-  <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=blue" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-blue.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a>
-
-
-<div class="stars"></div>
-<div class="moon"></div>
-<div class="words">
-  <p>Hackital - A student run hackathon in the capital.</p>
-  <p>Helping over 1,000 students meet each other, grow, build, design, and learn the skills they need to save the world, since 2016.</p>
-  <p> <a href="mailto:team@hackital.io">Contact</a> us for Sponsor or future event info.</p>
-</div>
-
-
-<style>
-
-html, body {
-  height: 100%;
-}
-
-body {
-  background-image: linear-gradient(7deg, #febdab 0%, #f8b9a9 25%, #a56274 60%, #3c4459 80%, #3c4459 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.stars {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 20em;
-  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 1px, transparent 2px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 2px), radial-gradient(white, rgba(255, 255, 255, 0.1) 1px, transparent 2px);
-  background-size: 350px 350px, 250px 250px, 150px 150px;
-  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-}
-
-.moon {
-  position: absolute;
-  left: calc(50% - $size / 2);
-  top: calc(50% - 15em);
-  width: 25em;
-  height: 25em;
-  background: #fff;
-  border-radius: 50%;
-  position: absolute;
-  background: linear-gradient(221deg, #e9c8b8 0%, rgba(0, 0, 0, 0) 58%, rgba(0, 0, 0, 0) 100%);
-}
-
-.words{
-  color: #ffffff;
-  margin-top: 30%;
-  padding: 10px;
-}
-</style>
-
-
-     <script>
-       //Mapbox functions
-      mapboxgl.accessToken = 'pk.eyJ1Ijoic2NoaWFyaXp6aSIsImEiOiJjajE4a3NuZWowNzQ5MzNvN2xkdGh2YnVwIn0.dOZQgGCs8Fwxpy7bmRvvTg';
-      var map = new mapboxgl.Map({
-        container: 'map', // container id
-        style: 'mapbox://styles/schiarizzi/cje3ka2m25q0w2rl70bd32303', // stylesheet location
-        center: [-77.036871, 38.898536], // starting position [lng, lat]
-        zoom: 12 // starting zoom
-      });
-       // disable map zoom when using scroll
-      map.scrollZoom.disable();
-       map.on('load', function() {
-        map.addLayer({
-          "id": "points",
-          "type": "symbol",
-          "source": {
-            "type": "geojson",
-            "data": {
-              "type": "FeatureCollection",
-              "features": [{
-                "type": "Feature",
-                "geometry": {
-                  "type": "Point",
-                  "coordinates": [-77.047203, 38.899932] //marvin center lon lat, based on address conversion
-                },
-                "properties": {
-                  "title": "Hackital",
-                  "icon": "castle"
-                }
-              }]
-            }
-          },
-          "layout": {
-            "icon-image": "{icon}-15",
-            "text-field": "{title}",
-            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-            "text-offset": [0, 0.6],
-            "text-anchor": "top"
-          },
-          "paint": {
-            "text-color": "rgba(255, 255, 255, 255)"
-          }
-        });
-       });
-       $(document).on('show', '.accordion', function(e) {
-        //$('.accordion-heading i').toggleClass(' ');
-        $(e.target).prev('.accordion-heading').addClass('accordion-opened');
-      });
-       $(document).on('hide', '.accordion', function(e) {
-        $(this).find('.accordion-heading').not($(e.target)).removeClass('accordion-opened');
-        //$('.accordion-heading i').toggleClass('fa-chevron-right fa-chevron-down');
-      });
-       $(document).ready(function() {
-        $('.mapboxgl-canvas').css({
-          'position': "initial"
-        });
-        $('.mapboxgl-control-container').css({
-          'display': 'none'
-        })
-      })
-    </script>
- </body>
+<body onload="displayQuote(); setTimeout(myFunction, 20000);">
+      <p class="quote" id="quote"></p>
+<center>  
+  <img src="https://cdn.glitch.com/08dc9071-e879-4c19-b303-aa42cf2e525c%2Fhackital.png?v=1585846829595" width="100%" >
+  <br>
+  <div class="holder">
+    <p>
+      Join Hackital's 2020 Game Jam. Our Game Jam is an online, 2 week long event, where we challenge everyone to build 
+      and launch a game from scratch using any technology, around a theme that we will announce the day the event kicks off.  We will host several free online technical workshops 
+      on programming and game building over the course of the jam for complete beginners and verterns alike. The Game Jam  is open to everyone in the world.
+      After you sign up we will invite you to a private Discord to chat with fellow participants and gain access to the workshops.
+    </p>
+    <br>
+    <p>
+      
+    </p>
+  </div>
+  <table>  
+    <tr>  
+      <div class="big">
+        April 17th - April 30th
+      </div>
+    </tr>
+    <tr>
+      <form>
+        <input class="big" placeholder="your@email.com">
+        <button class="submitButton"> 
+            Sign up
+        </button>
+      </form>
+    </tr>
+    <tr>  
+      <div class="big">
+        Sponsored by: ~~Your Company Here~~
+      </div>
+    </tr>
+    <br><br>
+    <tr>
+      <div class="big">
+        Follow Jam on Itch.io
+      </div>
+      <div class="big">
+        Code of Conduct
+      </div>
+      <div class="big">
+        Rules
+      </div>
+      <div class="big">
+        Workshop Schedule: TBA
+      </div>
+    </tr>
+  </table>  
+  <div class="holder">
+    <p>
+    Hackital - A hackathon in the capital.
+    <br>
+    Helping over 1,000 humans meet each other, grow, build, design, and learn the skills they need to save the world, since 2016.
+    <br>
+    <a href="mailto:team@hackital.io">Contact us for Sponsor or event info.</a>
+  </p>
+  </div>
+</center>
+</body>
 </html>
