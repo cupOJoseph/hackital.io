@@ -132,6 +132,10 @@ a.small {
     }  
 
 }
+
+li{
+    text-align: left;
+}
   
 @media screen and (max-width: 727px) {
     div.big, a.small {
