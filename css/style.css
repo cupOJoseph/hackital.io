@@ -134,7 +134,7 @@ a.small {
 }
 
 li{
-    text-align: left;
+    text-align: left !important;
 }
   
 @media screen and (max-width: 727px) {
